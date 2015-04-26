@@ -16,7 +16,7 @@
 		049976371AECA03100D6C433 /* CoinChangePuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049976361AECA03100D6C433 /* CoinChangePuzzleTests.m */; };
 		049976411AECA04E00D6C433 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049976401AECA04E00D6C433 /* QuartzCore.framework */; };
 		049976441AECA07800D6C433 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049976431AECA07800D6C433 /* DrawingView.m */; };
-		049976461AECA12900D6C433 /* complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 049976451AECA12900D6C433 /* complete.png */; };
+		049976481AECB76E00D6C433 /* complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 049976471AECB76E00D6C433 /* complete.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		049976401AECA04E00D6C433 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		049976421AECA07800D6C433 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
 		049976431AECA07800D6C433 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
-		049976451AECA12900D6C433 /* complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = complete.png; path = ../../../../complete.png; sourceTree = "<group>"; };
+		049976471AECB76E00D6C433 /* complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = complete.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		0499761A1AECA03000D6C433 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				049976451AECA12900D6C433 /* complete.png */,
+				049976471AECB76E00D6C433 /* complete.png */,
 				0499761B1AECA03000D6C433 /* Info.plist */,
 				0499761C1AECA03000D6C433 /* main.m */,
 			);
@@ -211,7 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049976461AECA12900D6C433 /* complete.png in Resources */,
+				049976481AECB76E00D6C433 /* complete.png in Resources */,
 				049976261AECA03100D6C433 /* Main.storyboard in Resources */,
 				0499762B1AECA03100D6C433 /* LaunchScreen.xib in Resources */,
 				049976281AECA03100D6C433 /* Images.xcassets in Resources */,
@@ -430,6 +430,7 @@
 				0499763C1AECA03100D6C433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0499763D1AECA03100D6C433 /* Build configuration list for PBXNativeTarget "CoinChangePuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +439,7 @@
 				0499763F1AECA03100D6C433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

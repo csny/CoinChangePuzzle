@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>438CFB08-464D-49A1-BAB1-18DE8829376A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CoinChangePuzzle</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</key>
 		<string>https://github.com/csny/CoinChangePuzzle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CoinChangePuzzle/CoinChangePuzzle.xcodeproj/project.xcworkspace</string>
+	<string>CoinChangePuzzle/CoinChangePuzzle.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</key>
