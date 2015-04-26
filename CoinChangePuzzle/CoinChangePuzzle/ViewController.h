@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  ChipflipGame
+//  CoinChangePuzzle
 //
-//  Created by macbook on 2015/04/20.
+//  Created by macbook on 2015/04/26.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 #import "DrawingView.h"
 
 @interface ViewController : UIViewController
+
 
 @end
 

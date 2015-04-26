@@ -1,19 +1,19 @@
 //
-//  ChipflipGameTests.m
-//  ChipflipGameTests
+//  CoinChangePuzzleTests.m
+//  CoinChangePuzzleTests
 //
-//  Created by macbook on 2015/04/20.
+//  Created by macbook on 2015/04/26.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface ChipflipGameTests : XCTestCase
+@interface CoinChangePuzzleTests : XCTestCase
 
 @end
 
-@implementation ChipflipGameTests
+@implementation CoinChangePuzzleTests
 
 - (void)setUp {
     [super setUp];

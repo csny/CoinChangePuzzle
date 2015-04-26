@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1D6B356D-B938-4B94-991C-9442D45CA195</string>
+	<string>438CFB08-464D-49A1-BAB1-18DE8829376A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ChipflipGame</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>581FD2C0F79DF434C2CF6AA5BF02FCAC820ACEB0</key>
-		<string>https://github.com/csny/ChipflipGame.git</string>
+		<key>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</key>
+		<string>https://github.com/csny/CoinChangePuzzle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ChipflipGame/ChipflipGame.xcodeproj</string>
+	<string>CoinChangePuzzle/CoinChangePuzzle.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>581FD2C0F79DF434C2CF6AA5BF02FCAC820ACEB0</key>
+		<key>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/csny/ChipflipGame.git</string>
+	<string>https://github.com/csny/CoinChangePuzzle.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>581FD2C0F79DF434C2CF6AA5BF02FCAC820ACEB0</string>
+	<string>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>581FD2C0F79DF434C2CF6AA5BF02FCAC820ACEB0</string>
+			<string>7F816CDE72077BB72A56D8E195CEB3C078ED7EEC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ChipflipGame</string>
+			<string>CoinChangePuzzle</string>
 		</dict>
 	</array>
 </dict>

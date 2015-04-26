@@ -1,8 +1,8 @@
 //
 //  DrawingView.m
-//  ChipflipGame
+//  CoinChangePuzzle
 //
-//  Created by macbook on 2015/04/20.
+//  Created by macbook on 2015/04/26.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
@@ -21,19 +21,6 @@
     return self;
 }
 
-- (BOOL)judgeChipcolor:(NSString *)chip
-{
-    BOOL ret;
-    if ([chip isEqual:@"A"] || [chip isEqual:@"C"] || [chip isEqual:@"E"] || [chip isEqual:@"G"] || [chip isEqual:@"I"] || [chip isEqual:@"K"]) {
-        // 銀貨
-        ret=NO;
-    } else {
-        // 金貨
-        ret=YES;
-    }
-    return ret;
-}
-
 - (void)initDrawArrays
 {
     // コイン総数
@@ -47,7 +34,7 @@
     _cnt=0;
     _selectedChip=10001;
     _nextChips = [@[@10001,@10001,@10001] mutableCopy];
-    _stateMessage=@"start";
+    _stateMessage=@"Drag and drop";
     
     // チップの隣接関係
     _adjacency = @[@[@6,@9,@10001],
@@ -205,11 +192,24 @@
     
 }
 
+- (BOOL)judgeChipcolor:(NSString *)chip
+{
+    BOOL ret;
+    if ([chip isEqual:@"A"] || [chip isEqual:@"C"] || [chip isEqual:@"E"] || [chip isEqual:@"G"] || [chip isEqual:@"I"] || [chip isEqual:@"K"]) {
+        // 銀貨
+        ret=NO;
+    } else {
+        // 金貨
+        ret=YES;
+    }
+    return ret;
+}
+
 // タッチ開始イベント
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // スワイプ開始位置を点で取得
     CGPoint startPt = [[touches anyObject] locationInView:self];
-    NSLog(@"スタートx:%f y:%f",startPt.x,startPt.y);
+    
     for (int i=0; i<_BEGIN_CHIP_NUM; i++) {
         NSValue *tempRect = [_circleRectArr objectAtIndex:i];
         // タッチ位置と丸の位置の判定
@@ -233,7 +233,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     // スワイプ終了位置を点で取得
     CGPoint endPt = [[touches anyObject] locationInView:self];
-    NSLog(@"エンドx:%f y:%f",endPt.x,endPt.y);
+    
     if (_isSelected) {
         int hit=0;
         for (int i=0; i<_BEGIN_CHIP_NUM; i++) {

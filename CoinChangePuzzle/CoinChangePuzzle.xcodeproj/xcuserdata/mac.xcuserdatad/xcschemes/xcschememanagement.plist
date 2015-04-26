@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ChipflipGame.xcscheme</key>
+		<key>CoinChangePuzzle.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0472BE4A1AE4718400851CC3</key>
+		<key>049976161AECA03000D6C433</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0472BE631AE4718600851CC3</key>
+		<key>0499762F1AECA03100D6C433</key>
 		<dict>
 			<key>primary</key>
 			<true/>

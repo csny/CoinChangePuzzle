@@ -1,8 +1,8 @@
 //
 //  DrawingView.h
-//  ChipflipGame
+//  CoinChangePuzzle
 //
-//  Created by macbook on 2015/04/20.
+//  Created by macbook on 2015/04/26.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
@@ -17,8 +17,8 @@
 @property NSArray *adjacency;
 
 // そのた変数
-@property BOOL isSelected;
 @property int BEGIN_CHIP_NUM;
+@property BOOL isSelected;
 @property int cnt;
 @property int selectedChip;
 @property NSString *stateMessage;

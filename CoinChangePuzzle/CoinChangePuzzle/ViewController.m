@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  ChipflipGame
+//  CoinChangePuzzle
 //
-//  Created by macbook on 2015/04/20.
+//  Created by macbook on 2015/04/26.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
@@ -94,12 +94,12 @@
     UIView *beforeView5 = [self.view viewWithTag:73190];
     UIView *beforeView6 = [self.view viewWithTag:73191];
     /*
-    // 実装順を覚えてればこれでも可
-    UIView *beforeView1 = [self.view.subviews objectAtIndex:0];
-    UIView *beforeView2 = [self.view.subviews objectAtIndex:1];
-    UIView *beforeView3 = [self.view.subviews objectAtIndex:2];
-    UIView *beforeView4 = [self.view.subviews objectAtIndex:3];
-    */
+     // 実装順を覚えてればこれでも可
+     UIView *beforeView1 = [self.view.subviews objectAtIndex:0];
+     UIView *beforeView2 = [self.view.subviews objectAtIndex:1];
+     UIView *beforeView3 = [self.view.subviews objectAtIndex:2];
+     UIView *beforeView4 = [self.view.subviews objectAtIndex:3];
+     */
     
     [beforeView1 removeFromSuperview];
     [beforeView2 removeFromSuperview];
@@ -110,6 +110,5 @@
     // 再作成
     [self addViews];
 }
-
 
 @end
