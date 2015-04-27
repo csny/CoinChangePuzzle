@@ -23,8 +23,9 @@
 
 - (void)initDrawArrays
 {
-    // コイン総数
+    // コイン総数と経路最大数
     _BEGIN_CHIP_NUM=12;
+    _MAXPATH=3;
     
     // コインの初期位置
     _chipLocation = [@[@"G",@"F",@"E",@"I",@"B",@"H",@"J",@"A",@"D",@"C",@"L",@"K"] mutableCopy];
@@ -36,7 +37,7 @@
     _nextChips = [@[@10001,@10001,@10001] mutableCopy];
     _stateMessage=@"Drag and drop";
     
-    // チップの隣接関係
+    // コインの隣接関係
     _adjacency = @[@[@6,@9,@10001],
                    @[@7,@8,@10],
                    @[@4,@9,@11],
@@ -102,7 +103,7 @@
     CGContextBeginPath(context);
     CGContextSetLineWidth(context, 2.0f);
     
-    // 羅列
+    // 丸の中心線をつなぐ感じでひたすら羅列
     // 一段目
     CGContextMoveToPoint(context, [[_circlePtArr objectAtIndex:0] CGPointValue].x, [[_circlePtArr objectAtIndex:0] CGPointValue].y);
     CGContextAddLineToPoint(context, [[_circlePtArr objectAtIndex:9] CGPointValue].x, [[_circlePtArr objectAtIndex:9] CGPointValue].y);
@@ -154,7 +155,7 @@
                 CGContextSetLineWidth(context, 5.0);
                 CGContextStrokeEllipseInRect(context, [tempRect CGRectValue]);
             }
-            for (int j=0; j<3; j++) {
+            for (int j=0; j<_MAXPATH; j++) {
                 // 交換可能なコイン
                 if (i==[_nextChips[j] intValue]) {
                     CGContextSetStrokeColor(context, emerald);
@@ -192,6 +193,7 @@
     
 }
 
+// コイン色判定、金貨ならYESを返す
 - (BOOL)judgeChipcolor:(NSString *)chip
 {
     BOOL ret;
@@ -214,15 +216,15 @@
         NSValue *tempRect = [_circleRectArr objectAtIndex:i];
         // タッチ位置と丸の位置の判定
         if (CGRectContainsPoint([tempRect CGRectValue],startPt)){
-            // 交換可能な隣接コインのチェック
-            // 自分のコイン色と隣のコイン色を比べて_nextChipsに格納
-            for (int j=0; j<3; j++) {
+            // 隣接コインとコイン色を比べて交換可能なコインを_nextChipsに格納
+            for (int j=0; j<_MAXPATH; j++) {
                 if ([_adjacency[i][j] intValue]<_BEGIN_CHIP_NUM) {
                     if ([self judgeChipcolor:_chipLocation[i]]!=[self judgeChipcolor:_chipLocation[[_adjacency[i][j] intValue]]]) {
                         _nextChips[j]=_adjacency[i][j];
                     }
                 }
             }
+            // タッチ開始のフラグを立てて、再描画
             _selectedChip = i;
             _isSelected = YES;
             [self setNeedsDisplay];
@@ -240,9 +242,8 @@
             NSValue *tempRect = [_circleRectArr objectAtIndex:i];
             // タッチ位置と丸の位置の判定
             if (CGRectContainsPoint([tempRect CGRectValue],endPt)){
-                // 隣のコインの色をチェック、終点のコインをチェック
-                // 自分のコイン色と隣のコイン色を比べて、異なれば交換してメッセージ送信
-                for (int j=0; j<3; j++) {
+                // 交換可否チェック済みの_nextChipsとのつきあわせ
+                for (int j=0; j<_MAXPATH; j++) {
                     if (i==[_nextChips[j] intValue]) {
                         // コイン入れ替え
                         NSString *memo=_chipLocation[_selectedChip];
@@ -257,6 +258,7 @@
                 }
             }
         }
+        // コイン交換の成否に関係ない事後処理
         _isSelected = NO;
         _selectedChip = 10001;
         _nextChips = [@[@10001,@10001,@10001] mutableCopy];

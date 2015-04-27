@@ -18,6 +18,7 @@
 
 // そのた変数
 @property int BEGIN_CHIP_NUM;
+@property int MAXPATH;
 @property BOOL isSelected;
 @property int cnt;
 @property int selectedChip;
